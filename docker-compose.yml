@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend  # ✅ Specifies where Dockerfile is
+      dockerfile: Dockerfile  # ✅ Ensures the correct file is used
+    ports:
+      - "8000:3000"
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: ./frontend/stream-frontend  # ✅ Specifies the correct path
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
