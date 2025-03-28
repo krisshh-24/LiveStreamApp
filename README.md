@@ -1,86 +1,73 @@
-# LiveFlow
+# LiveFlow - The Ultimate Streaming Solution
 
-LiveStreamApp is a simple yet powerful live streaming platform that allows users to stream directly to platforms like YouTube using their stream keys. It is designed to be lightweight and scalable, leveraging **FFmpeg** and **RTMP** for efficient streaming.
+LiveFlow is a powerful, feature-rich streaming platform that enables users to broadcast live content seamlessly. Built with a modern tech stack, it provides high-quality, low-latency streaming with an intuitive user experience.
 
 ## 🚀 Features
-
-- 🎥 **Live Stream to YouTube** using a stream key.
-- 🔴 **Start & End Streaming** with dedicated buttons.
-- 🎨 **Dark Themed UI** with a modern and elegant look.
-- 🏆 **HD Quality, Low Latency, and Multi-Platform Support**.
-- 👥 **User Feed** section displaying ongoing streams.
+- 🎥 **HD Quality** - Stream in high resolution without lag.
+- ⚡ **Low Latency** - Experience real-time streaming with minimal delay.
+- 🌍 **Multi-Platform Support** - Stream to YouTube, Twitch, and other platforms.
+- 🎛️ **Easy Controls** - Start and stop streaming with a single click.
+- 🎨 **Dark Mode UI** - Elegant design with a smooth user experience.
 
 ## 🛠️ Tech Stack
+- **Frontend:** React, Vite, Socket.io, Styled Components
+- **Backend:** Node.js, Express, FFmpeg, Socket.io, PM2
+- **Database:** MongoDB
+- **Streaming:** FFmpeg, RTMP Protocol
+- **Containerization:** Docker, Docker Compose
 
-### **Frontend**
-- React.js
-- Vite
-- Styled Components (for styling)
-- Socket.io-client
+## 📦 Installation & Setup
 
-### **Backend**
-- Node.js (Express)
-- Socket.io
-- FFmpeg (for stream processing)
-- RTMP Server
-- Docker (for containerization)
-
-## 📦 Setup & Installation
-
-### **Prerequisites**
-Make sure you have the following installed:
-- **Node.js** (v16+)
-- **Docker & Docker Compose**
-- **FFmpeg** (Ensure it’s added to your system path)
-
-### **Step 1: Clone the Repository**
+### 1️⃣ Clone the Repository
 ```sh
- git clone https://github.com/krisshh-24/LiveStreamApp.git
- cd LiveStreamApp
+git clone https://github.com/krisshh-24/LiveStreamApp.git
+cd LiveStreamApp
 ```
 
-### **Step 2: Set Up Environment Variables**
-Create a `.env` file in the `backend` directory and configure:
-```
-RTMP_URL=rtmp://a.rtmp.youtube.com/live2
+### 2️⃣ Setup Environment Variables
+Create a `.env` file inside the backend directory and add the required variables:
+```env
 PORT=3000
+MONGO_URI=your_mongo_database_url
+RTMP_URL=your_rtmp_server_url
 ```
 
-### **Step 3: Run the Application using Docker**
+### 3️⃣ Run with Docker
 ```sh
- docker-compose up --build
+docker compose up --build
 ```
-This will start both the **frontend** and **backend** containers.
 
-### **Step 4: Access the App**
-- **Frontend:** `http://localhost:5173`
-- **Backend:** `http://localhost:3000`
+### 4️⃣ Run Locally (Without Docker)
+#### Backend:
+```sh
+cd backend
+npm install
+npm start
+```
+#### Frontend:
+```sh
+cd frontend
+npm install
+npm run dev
+```
 
-## 📝 Usage
-1. **Enter your YouTube Stream Key** in the input field.
-2. Click **Start Streaming** to begin live streaming.
-3. To stop streaming, click **End Streaming**.
-
-## 🚀 Deployment
-To deploy on a cloud platform, you can use:
-- **Docker Swarm / Kubernetes** for scalability.
-- **Vercel / Netlify** for frontend.
-- **AWS / DigitalOcean** for backend & RTMP setup.
-
-## 📸 Screenshots
-![LiveStreamApp UI](./screenshots/ui.png)
+## 📺 Usage
+1. Open the LiveFlow app.
+2. Enter your **YouTube Stream Key**.
+3. Click **Start Streaming** to begin broadcasting.
+4. Click **End Streaming** to stop the stream.
 
 ## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
-## 🎯 Future Enhancements
-- 🎙️ **Mic & Camera Settings Customization**.
-- 🎛 **OBS-like Controls for Streamers**.
-- 📡 **Multi-platform Streaming (Twitch, Facebook Live, etc.)**.
+## 💡 Future Enhancements
+- 🖥️ **More Streaming Platforms** - Support for Facebook Live, Instagram Live.
+- 🔴 **Live Chat Integration** - Engage with viewers in real-time.
+- 🎵 **Audio-Only Mode** - Podcast-style streaming.
 
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+## 💬 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
-**Developed with ❤️ by Krish Sagar**
+💙 Made with passion by [Krish Sagar](https://github.com/krisshh-24) 🚀
 
